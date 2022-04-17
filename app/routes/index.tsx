@@ -1,5 +1,11 @@
-import React from "react";
+import type { LinksFunction } from "@remix-run/node";
 
-export default function index() {
+import stylesUrl from "~/styles/index.css";
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
+
+export default function IndexRoute() {
   return <div>Hello Index Route</div>;
 }
